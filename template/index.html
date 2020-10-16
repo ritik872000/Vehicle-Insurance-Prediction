@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle Insurance Prediction</title>
+</head>
+
+
+<body>
+
+
+    <div align="center" class="container">
+
+        <h1>Vehicle Insurance Prediction</h1>
+
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}" method="post">
+
+            <input type="text" name="Gender" placeholder="Gender (0/1)" required="required" />
+            <br>
+            <input type="text" name="Age" placeholder="Age (years)" required="required" />
+            <br>
+            <input type="text" name=" Driving License" placeholder="Driving License (0/1)" required="required" />
+            <br>
+            <input type="text" name="Region Code" placeholder="Region Code" required="required" />
+            <br>
+            <input type="text" name="Previosuly insured" placeholder="Previosuly Insured (0/1)" required="required" />
+            <br>
+            <input type="text" name="Vehicle Age" placeholder="Vehicle Age (years)" required="required" />
+            <br>
+            <input type="text" name="Vehicle Damage" placeholder="Vehicle Damage (0/1)" required="required" />
+            <br>
+            <input type="text" name="Annual Premium" placeholder="Annual Premium (rs)" required="required" />
+            <br>
+            <input type="text" name="Policy Sales Channel" placeholder="Policy Sales Channel" required="required" />
+            <br>
+            <input type="text" name="Vintage" placeholder="Vintage (Years of association with the company)" required="required" />
+            <br>
+
+            <button type="submit">Predict</button>
+        </form>
+
+        <br>
+        <br> {{ prediction_text }}
+    </div>
+</body>
+
+</html>
