@@ -3,6 +3,4 @@ gunicorn==20.0.4
 Jinja2==2.11.2
 numpy==1.18.5
 python-dateutil==2.8.1
-python-jsonrpc-server @ file:///tmp/build/80754af9/python-jsonrpc-server_1594397536060/work
-python-language-server @ file:///C:/ci/python-language-server_1594152769556/work
 3python-Levenshtein==0.12.0
