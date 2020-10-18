@@ -4,6 +4,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
     <title>Vehicle Insurance Prediction</title>
 </head>
 
@@ -11,40 +12,73 @@
 <body>
 
 
-    <div align="center" class="container">
+<div align="center" class="container">
 
-        <h1>Vehicle Insurance Prediction</h1>
+    <h1>Vehicle Insurance Prediction</h1>
 
-        <!-- Main Input For Receiving Query to our ML -->
-        <form action="{{ url_for('predict')}}" method="post">
 
-            <input type="text" name="Gender" placeholder="Gender (0/1)" required="required" />
-            <br>
-            <input type="text" name="Age" placeholder="Age (years)" required="required" />
-            <br>
-            <input type="text" name=" Driving License" placeholder="Driving License (0/1)" required="required" />
-            <br>
-            <input type="text" name="Region Code" placeholder="Region Code" required="required" />
-            <br>
-            <input type="text" name="Previosuly insured" placeholder="Previosuly Insured (0/1)" required="required" />
-            <br>
-            <input type="text" name="Vehicle Age" placeholder="Vehicle Age (years)" required="required" />
-            <br>
-            <input type="text" name="Vehicle Damage" placeholder="Vehicle Damage (0/1)" required="required" />
-            <br>
-            <input type="text" name="Annual Premium" placeholder="Annual Premium (rs)" required="required" />
-            <br>
-            <input type="text" name="Policy Sales Channel" placeholder="Policy Sales Channel" required="required" />
-            <br>
-            <input type="text" name="Vintage" placeholder="Vintage (yrs of association with the company)" required="required" />
-            <br>
+    <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}" method="post">
 
-            <button type="submit">Predict</button>
-        </form>
-
+        <input name="Gender" placeholder="Gender (0/1)" required="required" style="width: 300px;" type="text"/>
         <br>
-        <br> {{ prediction_text }}
-    </div>
+        <label>0: Female 1: Male</label>
+        <br>
+        <br>
+        <input name="Age" placeholder="Age (years)" required="required" style="width: 300px;" type="text"/>
+        <br>
+        <br>
+        <br>
+        <input name=" Driving License" placeholder="Driving License (0/1)" required="required" style="width: 300px;"
+               type="text"/>
+        <br>
+        <label>0: No License 1: License </label>
+        <br>
+        <br>
+        <input name="Region Code" placeholder="Region Code" required="required" style="width: 300px;" type="text"/>
+        <br>
+        <br>
+        <br>
+        <input name="Previosuly insured" placeholder="Previosuly Insured (0/1)" required="required"
+               style="width: 300px;"
+               type="text"/>
+        <br>
+        <label>0: No 1: Yes</label>
+        <br>
+        <br>
+        <input name="Vehicle Age" placeholder="Vehicle Age (years)" required="required" style="width: 300px;"
+               type="text"/>
+        <br>
+        <br>
+        <br>
+        <input name="Vehicle Damage" placeholder="Vehicle Damage (0/1)" required="required" style="width: 300px;"
+               type="text"/>
+        <br>
+        <label>0: No 1: Yes</label>
+        <br>
+        <br>
+        <input type="text" name="Annual Premium" placeholder="Annual Premium (rs)" required="required"
+               style="width: 300px;"/>
+        <br>
+        <br>
+        <br>
+        <input name="Policy Sales Channel" placeholder="Policy Sales Channel" required="required" style="width: 300px;"
+               type="text"/>
+        <br>
+        <br>
+        <br>
+        <input name="Vintage" placeholder="Vintage (Years of association with the company)" required="required"
+               style="width: 300px;" type="text"/>
+        <br>
+        <br>
+
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <br>
+    <br> {{ prediction_text }}
+</div>
 </body>
 
 </html>
