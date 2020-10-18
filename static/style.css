@@ -1,0 +1,51 @@
+body {
+    background-color: black;
+    background-position: center;
+    background-size: cover;
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    text-align: center;
+    color: white;
+}
+
+.container {
+    padding: 20px;
+    height: 760px;
+    width: 310px;
+    float: right;
+    margin-right: 300px;
+    background-color: #0062FF;
+    margin-right: 580px;
+}
+
+input[type=text] {
+    background-color: black;
+    border: 3px solid #EAECEE;
+    border-radius: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    height: 30px;
+    text-align: center;
+    display: inline;
+}
+
+.container form label {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    color: black;
+}
+
+button[type=submit] {
+    background-color: black;
+    color: white;
+    border: 3px solid #EAECEE;
+    width: 150px;
+    height: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    border-radius: 12px;
+    margin-left: 75px;
+}
