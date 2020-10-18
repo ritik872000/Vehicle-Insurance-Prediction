@@ -19,6 +19,7 @@ h1 {
     margin-right: 300px;
     background-color: #0062FF;
     margin-right: 580px;
+    color: white;
 }
 
 input[type=text] {
@@ -49,4 +50,8 @@ button[type=submit] {
     font-weight: 300;
     border-radius: 12px;
     margin-left: 75px;
+}
+
+prediction_text {
+    color: white;
 }
