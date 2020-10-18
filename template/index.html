@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
+    <title>Vehicle Insurance Prediction</title>
+</head>
+
+
+<body>
+    <h1>VEHICLE INSURANCE PREDICTION</h1>
+
+
+    <div class='container'>
+
+
+
+
+        <!-- Main Input For Receiving Query to our ML -->
+        <form action="{{ url_for('predict')}}" method="post">
+            <div>
+
+                <label>Gender</label>
+                <input name="Gender" placeholder="0: Female 1: Male" required="required" style="width: 300px;" type="text" />
+                <br>
+                <br>
+
+
+
+                <label>Age</label>
+                <input name="Age" placeholder=" Years" required="required" style="width: 300px;" type="text" />
+                <br>
+                <br>
+
+
+
+                <label> Driving License</label>
+                <input name=" Driving License" placeholder="0: No License 1: License " required="required" style="width: 300px;" type="text" />
+                <br>
+                <br>
+
+
+
+
+                <label>Region Code</label>
+                <input name="Region Code" placeholder="Region Code" required="required" style="width: 300px;" type="text" />
+                <br>
+                <br>
+
+
+
+                <label>Previosuly insured</label>
+                <input name="" placeholder="0: No 1: Yes" required="required" style="width: 300px;" type="text" />
+                <br>
+                <br>
+
+
+
+
+                <label>Vehicle Age</label>
+                <input name="Vehicle Age" placeholder="years" required="required" style="width: 300px;" type="text" />
+                <br>
+                <br>
+
+
+
+                <label>Vehicle Damage</label>
+                <input name="Vehicle Damage" placeholder="0: No 1: Yes" required="required" style="width: 300px;" type="text" />
+                <br>
+                <br>
+
+
+                <label>Annual Premium</label>
+                <input type="text" name="Annual Premium" placeholder="Amount in Rs" required="required" style="width: 300px;" />
+                <br>
+                <br>
+
+
+                <label>Policy Sales Channel</label>
+                <input name="Policy Sales Channel" placeholder="Policy Sales Channel" required="required" style="width: 300px;" type="text" />
+                <br>
+                <br>
+
+
+                <label>Vintage</label>
+                <input name="Vintage" placeholder="Years of association with the company" required="required" style="width: 300px;" type="text" />
+                <br>
+                <br>
+            </div>
+
+
+            <button type="submit">Predict</button>
+
+    </div>
+    </form>
+
+    <br>
+    <br> {{ prediction_text }}
+
+    </div>
+
+</body>
+
+</html>
