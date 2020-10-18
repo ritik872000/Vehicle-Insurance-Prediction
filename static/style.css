@@ -1,0 +1,31 @@
+button[type=submit]{
+    background-color: #EAECEE;
+    color: black;
+    border: 2px solid #EAECEE;
+    width: 150px;
+    Height: 30px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+
+input[type=text]{
+    background-color: #EAECEE;
+    color: black;
+    border-radius: 12px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    height:30px;
+}
+
+
+h1{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    }
+
+body{
+    background-image: url(background.png);
+    background-position: center;
+    background-size: cover;
+    }
