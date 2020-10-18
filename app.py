@@ -3,7 +3,7 @@ from flask import Flask, render_template, request, url_for
 import pickle
 import os
 
-app = Flask('__name__', template_folder='template')
+app = Flask('__name__', template_folder='template',static_folder='static')
 model = pickle.load(open('model.pkl', 'rb'))
 port=int(os.environ.get('PORT',5000))
 
