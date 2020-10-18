@@ -30,6 +30,7 @@ input[type=text] {
     height: 30px;
     text-align: center;
     display: inline;
+    color: white;
 }
 
 .container form label {
