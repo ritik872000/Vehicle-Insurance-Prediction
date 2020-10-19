@@ -55,3 +55,15 @@ button[type=submit] {
 prediction_text {
     color: white;
 }
+
+@media only screen and (max-width: 640px) {
+    .container {
+        float: none;
+        width: fit-content;
+    }
+    h1 {
+        font-size: 20px;
+        text-align: center;
+        margin-right: 275px;
+    }
+}
