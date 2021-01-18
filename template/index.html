@@ -1,89 +1,120 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=480px, initial-scale=1,user-scalable=no">
-    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='style.css')}}">
     <title>Vehicle Insurance Prediction</title>
+    <link rel='stylesheet' href='https://codepen.io/uzcho_/pen/RmOWmw.css'>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css'>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prefixfree/1.0.7/prefixfree.min.js"></script>
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
 </head>
 
-
 <body>
-    <h1>VEHICLE INSURANCE PREDICTION</h1>
+    partial:index.partial.html
+    <header>
+        <h1>Vehicle Insurance Prediction</h1>
+        <br>
 
+    </header>
+    <div class="container">
+        <form>
 
-    <div class='container'>
+            <div class="field" tabindex="2">
+                <label>
+				Your Gender
+			</label>
+                <input name="Gender" type="text" placeholder="0: Female 1: Male" required>
+            </div>
 
+            <div class="field" tabindex="2">
+                <label>
+			Your Age
+			</label>
+                <input name="Age" type="text" placeholder="In years" required>
+            </div>
 
+            <div class="field" tabindex="2">
+                <label>
+				Your license status
+			</label>
+                <input name="Driving License" type="text" placeholder="0: No License 1: License" required>
+            </div>
 
+            <div class="field" tabindex="2">
+                <label>
+				Your region code
+			</label>
+                <input name="Region Code" type="text" placeholder="Region Code" required>
+            </div>
 
-        <!-- Main Input For Receiving Query to our ML -->
-        <form action="{{ url_for('predict')}}" method="post">
+            <div class="field" tabindex="2">
+                <label>
+				</i>Your insurance status
+			</label>
+                <input name="Previously Insured" type="text" placeholder="0: No 1: Yes" required>
+            </div>
 
+            <div class="field" tabindex="2">
+                <label>
+				Your vehicle's age
+			</label>
+                <input name="Vehicle Age" type="text" placeholder="In years" required>
+            </div>
 
-            <label>Gender</label>
-            <input name="Gender" placeholder="0: Female 1: Male" required="required" style="width: 300px;" type="text" />
-            <br>
-            <br>
+            <div class="field" tabindex="2">
+                <label>
+				Your vehicle's damage if any
+			</label>
+                <input name="Vehicle Damage" type="text" placeholder="0: No 1: Yes" required>
+            </div>
 
-            <label>Age</label>
-            <input name="Age" placeholder=" Years" required="required" style="width: 300px;" type="text" />
-            <br>
-            <br>
+            <div class="field" tabindex="2">
+                <label>
+				Your annual premium amount
+			</label>
+                <input name="Annual Premium" type="text" placeholder="Annual premium amount" required>
+            </div>
 
-            <label> Driving License</label>
-            <input name=" Driving License" placeholder="0: No License 1: License " required="required" style="width: 300px;" type="text" />
-            <br>
-            <br>
+            <div class="field" tabindex="2">
+                <label for=>
+				Your policy sales channel no
+			</label>
+                <input name="Policy Sales Channel" type="text" placeholder="Policy sales channel " required>
+            </div>
 
-            <label>Region Code</label>
-            <input name="Region Code" placeholder="Region Code" required="required" style="width: 300px;" type="text" />
-            <br>
-            <br>
-
-            <label>Previosuly insured</label>
-            <input name="Previosuly insured" placeholder="0: No 1: Yes" required="required" style="width: 300px;" type="text" />
-            <br>
-            <br>
-
-            <label>Vehicle Age</label>
-            <input name="Vehicle Age" placeholder="years" required="required" style="width: 300px;" type="text" />
-            <br>
-            <br>
-
-            <label>Vehicle Damage</label>
-            <input name="Vehicle Damage" placeholder="0: No 1: Yes" required="required" style="width: 300px;" type="text" />
-            <br>
-            <br>
-
-            <label>Annual Premium</label>
-            <input name="Annual Premium" placeholder="Amount in Rs" required="required" style="width: 300px;" type="text" />
-            <br>
-            <br>
-
-            <label>Policy Sales Channel</label>
-            <input name="Policy Sales Channel" placeholder="Policy Sales Channel" required="required" style="width: 300px;" type="text" />
-            <br>
-            <br>
-
-            <label>Vintage</label>
-            <input name="Vintage" placeholder="Years of association with the company" required="required" style="width: 300px;" type="text" />
-            <br>
-            <br>
-
-
+            <div class="field" tabindex="2">
+                <label>
+				Your tenure with company
+			</label>
+                <input name="Vintage" type="text" placeholder="In years " required>
+            </div>
 
             <button type="submit">Predict</button>
+            <br>{{ prediction_text }}
 
 
+
+            <div class="social-media">
+                <span>
+				Get In Touch<i class="fas fa-long-arrow-alt-right"></i>
+			</span>
+                <a class="fab fa-linkedin" href="https://www.linkedin.com/in/ritikkesharwani/" target="blank_"></a>
+                <a class="fab fa-github" href="https://github.com/ritik872000" target="blank_"></a>
+                <a class="fab fa-medium" href="https://medium.com/@ritikkesharwani3" target="blank_"></a>
+
+            </div>
         </form>
 
-        <br>
-        <br> {{ prediction_text }}
+
 
     </div>
+
+
+
+    <!-- This is not part of Pen -->
+    <!-- partial -->
 
 </body>
 
